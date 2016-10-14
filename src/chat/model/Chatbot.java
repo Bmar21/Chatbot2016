@@ -3,9 +3,10 @@ package chat.model;
 import java.util.ArrayList;
 
 /**
- * Base version of the 2015 Chatbot class. Only stub methods are provided.
- * Students will complete methods as part * of the project. * @author Cody
- * Henrichsen * @version 1.0 10/14/15
+ * Base version of the 2016 Chatbot class. Only stub methods are provided.
+ * Students will complete methods as part * of the project. 
+ * @author Brandon Marlor 
+ * @version 1.0 10/14/16
  */
 public class Chatbot {
 	private ArrayList<String> memesList;
@@ -20,6 +21,7 @@ public class Chatbot {
 	public Chatbot(String userName) 
 	{
 		this.memesList = new ArrayList<String>();
+		this.userName = new String(userName);
 	}
 
 	private void buildMemesList() 
@@ -81,7 +83,7 @@ public class Chatbot {
 	 * of the Chatbot.
 	 */
 	public String getUserName() {
-		return null;
+		return userName;
 	}
 
 	/**
