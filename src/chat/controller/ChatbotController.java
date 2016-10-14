@@ -2,5 +2,14 @@ package chat.controller;
 
 public class ChatbotController 
 {
-	public 
+	private Chatbot stupidBot;
+	private ChatViewer display;
+	
+	
+	
+	
+	public void start()
+	{
+		
+	}
 }

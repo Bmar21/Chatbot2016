@@ -17,13 +17,17 @@ public class Chatbot {
 	 * * Creates an instance of the Chatbot with the supplied username. * @param
 	 * userName The username for the chatbot.
 	 */
-	public Chatbot(String userName) {
+	public Chatbot(String userName) 
+	{
+		this.memesList = new ArrayList<String>();
 	}
 
-	private void buildMemesList() {
+	private void buildMemesList() 
+	{
 	}
 
-	private void buildPoliticalTopicsList() {
+	private void buildPoliticalTopicsList() 
+	{
 	}
 
 	/**
@@ -93,7 +97,7 @@ public class Chatbot {
 	 * meme list.
 	 */
 	public ArrayList<String> getMemesList() {
-		return null;
+		return memesList;
 	}
 
 	/**
