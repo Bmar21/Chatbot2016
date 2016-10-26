@@ -8,7 +8,8 @@ import java.util.ArrayList;
  * @author Brandon Marlor 
  * @version 1.0 10/14/16
  */
-public class Chatbot {
+public class Chatbot 
+{
 	private ArrayList<String> memesList;
 	private ArrayList<String> politicalTopicList;
 	private String userName;
@@ -20,17 +21,30 @@ public class Chatbot {
 	 */
 	public Chatbot(String userName) 
 	{
+		this.politicalTopicList = new ArrayList<String>();
 		this.memesList = new ArrayList<String>();
 		this.userName = new String(userName);
 		this.content = new String("boob n' tube");
+		this.buildMemesList();
+		this.buildPoliticalTopicList();
 	}
 
-	private void buildMemesList() 
+	private boolean buildMemesList() 
 	{
+		boolean bulidMemesList;
+		
+		boolean MemesList = false;
+		
+		return MemesList;
 	}
 
-	private void buildPoliticalTopicsList() 
+	private boolean buildPoliticalTopicList() 
 	{
+		boolean bulidPolitiaclTopicList;
+		
+		boolean PoliticalTopicList = false;
+		
+		return PoliticalTopicList; 
 	}
 
 	/**
@@ -58,9 +72,18 @@ public class Chatbot {
 	 *            The supplied String to be checked. * @return Whether it
 	 *            matches the content area.
 	 */
-	public boolean contentChecker(String currentInput) {
-		return false;
+	public boolean contentChecker(String currentInput) 
+	{
+		boolean hasContent = false;
+		
+		if(currentInput.contains(content))
+		{
+			hasContent = true;
+		}
+		
+		return hasContent;
 	}
+	
 
 	/**
 	 * * Checks if supplied String matches ANY of the topics in the
@@ -71,8 +94,10 @@ public class Chatbot {
 	 *            The supplied String to be checked. * @return Whether the
 	 *            String is contained in the ArrayList.
 	 */
-	public boolean politicalTopicChecker(String currentInput) {
-		return false;
+	public boolean politicalTopicChecker(String currentInput) 
+	{
+		boolean haspoliticalTopicChecker
+		
 	}
 
 	/**
