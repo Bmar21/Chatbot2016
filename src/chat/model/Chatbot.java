@@ -22,6 +22,7 @@ public class Chatbot {
 	{
 		this.memesList = new ArrayList<String>();
 		this.userName = new String(userName);
+		this.content = new String("boob n' tube");
 	}
 
 	private void buildMemesList() 
@@ -90,7 +91,8 @@ public class Chatbot {
 	 * * Returns the username of this Chatbot instance. * @return The username
 	 * of the Chatbot.
 	 */
-	public String getUserName() {
+	public String getUserName() 
+	{
 		return userName;
 	}
 
@@ -98,15 +100,17 @@ public class Chatbot {
 	 * * Returns the content area for this Chatbot instance. * @return The
 	 * content area for this Chatbot instance.
 	 */
-	public String getContent() {
-		return null;
+	public String getContent() 
+	{
+		return content;
 	}
 
 	/**
 	 * * Getter method for the memesList object. * @return The reference to the
 	 * meme list.
 	 */
-	public ArrayList<String> getMemesList() {
+	public ArrayList<String> getMemesList() 
+	{
 		return memesList;
 	}
 
