@@ -97,8 +97,6 @@ public class Chatbot
 	public boolean politicalTopicChecker(String currentInput) 
 	{
 		boolean haspoliticalTopicChecker
-		
-		
 	}
 
 	/**
@@ -144,7 +142,8 @@ public class Chatbot
 	 * * Getter method for the politicalTopicList object. * @return The
 	 * reference to the political topic list.
 	 */
-	public ArrayList<String> getPoliticalTopicList() {
+	public ArrayList<String> getPoliticalTopicList() 
+	{
 		return null;
 	}
 
@@ -152,7 +151,8 @@ public class Chatbot
 	 * * Updates the content area for this Chatbot instance. * @param content
 	 * The updated value for the content area.
 	 */
-	public void setContent(String content) {
+	public void setContent(String content) 
+	{
 	}
 
 }
