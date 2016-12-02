@@ -47,6 +47,13 @@ public class Chatbot
 		return PoliticalTopicList; 
 	}
 
+	public boolean quitChecker(String currentInput)
+	{
+		boolean hasQuit
+	}
+	
+	
+	
 	/**
 	 * * Checks the length of the supplied string. Returns false if the supplied
 	 * String is empty or null, otherwise returns true. * @param currentInput * @return
@@ -96,7 +103,7 @@ public class Chatbot
 	 */
 	public boolean politicalTopicChecker(String currentInput) 
 	{
-		boolean haspoliticalTopicChecker
+		
 	}
 
 	/**

@@ -4,7 +4,7 @@ import chat.controller.ChatController;
 import javax.swing.*;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 
@@ -61,6 +61,17 @@ public class ChatPanel extends JPanel
 	
 	private void setupListeners()
 	{
-		
-	}
+		chatButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				String userWords = chatField.getText();
+				String bothResponse = baseController.useChatbotCheckers(userWords);
+				
+				chatDisplay.setText("You said: " + userWords + "\n" + "Chatbot said" + bothResponse);
+				chatField.setText("");
+			}
+		});
+		}
+
 }
