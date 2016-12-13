@@ -8,6 +8,7 @@ public class ChatFrame extends JFrame
 {
 	 private ChatController baseController;
 	 private ChatPanel basePanel;
+	 private ChatFrame baseFrame;
 	 
 	 public ChatFrame(ChatController baseController)
 	 {
@@ -16,6 +17,11 @@ public class ChatFrame extends JFrame
 		 basePanel = new ChatPanel(baseController);
 		 
 		 setupFrame();
+	 }
+	 
+	 public void setUp() throws Exception 
+	 {
+		 baseFrame = new ChatFrame(new ChatController());
 	 }
 	 
 	 private void setupFrame()

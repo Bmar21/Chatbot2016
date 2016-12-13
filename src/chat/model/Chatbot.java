@@ -49,7 +49,7 @@ public class Chatbot
 
 	public boolean quitChecker(String currentInput)
 	{
-		boolean hasQuit
+		
 	}
 	
 	

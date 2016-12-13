@@ -2,6 +2,7 @@ package chat.controller;
 
 import chat.model.Chatbot;
 import chat.view.ChatViewer;
+import chat.view.ChatFrame; 
 
 public class ChatController 
 {
@@ -98,6 +99,13 @@ public class ChatController
 		
 		return randomTopic;
 	}
+
+	public ChatFrame getBaseFrame()
+	{
+		return baseFrame;
+	}
+
+
 }
 
 
