@@ -24,7 +24,26 @@ public class ChatController
 			chatView.displayMessage(useChatbotCheckers(response));
 			response = chatView.collectResponse("You are interested in " + response);
 		}	
+		
+		if("".equals(""))
+		{
+			
+		}	
 	}
+	
+	public ChatFrame getBaseFrame()
+	{
+		return null;
+	}
+	
+	public Chatbot getChatbot()
+	{
+		return null;
+	}
+	
+	
+	
+	
 	
 	public String useChatbotCheckers(String input)
 	{
@@ -57,7 +76,7 @@ public class ChatController
 		}
 		else
 		{
-			chatView.displayMessage("Thank you chatting with me :D");
+			chatView.displayMessage("Thank you for chatting with me :D");
 			System.exit(0);
 		}
 		
@@ -99,12 +118,6 @@ public class ChatController
 		
 		return randomTopic;
 	}
-
-	public ChatFrame getBaseFrame()
-	{
-		return baseFrame;
-	}
-
 
 }
 
