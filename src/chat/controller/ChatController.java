@@ -41,10 +41,6 @@ public class ChatController
 		return null;
 	}
 	
-	
-	
-	
-	
 	public String useChatbotCheckers(String input)
 	{
 		String answer = "";
