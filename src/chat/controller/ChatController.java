@@ -8,27 +8,29 @@ public class ChatController
 {
 	private Chatbot  stupidBot;
 	private ChatViewer chatView;
+	private ChatFrame baseFrame;
 	
 	public ChatController()
 	{
 		stupidBot = new Chatbot("Barack Obama");
 		chatView = new ChatViewer();
+		baseFrame= new ChatFrame(this);
 	}
 	
 	public void start()
 	{
-		String response = chatView.collectResponse("What do you want to talk about today?????");
-		
-		while(stupidBot.lengthChecker(response))
-		{
-			chatView.displayMessage(useChatbotCheckers(response));
-			response = chatView.collectResponse("You are interested in " + response);
-		}	
-		
-		if("".equals(""))
-		{
+//		String response = chatView.collectResponse("What do you want to talk about today?????");
+//		
+//		while(stupidBot.lengthChecker(response))
+//		{
+//			chatView.displayMessage(useChatbotCheckers(response));
+//			response = chatView.collectResponse("You are interested in " + response);
+//		}	
+//		
+//		if("".equals(""))
+//		{
 			
-		}	
+//		}	
 	}
 	
 	public ChatFrame getBaseFrame()
