@@ -13,7 +13,7 @@ public class ChatController
 	public ChatController()
 	{
 		stupidBot = new Chatbot("Barack Obama");
-		chatView = new ChatViewer(this);
+		chatView= new ChatViewer();
 		baseFrame= new ChatFrame(this);
 	}
 	

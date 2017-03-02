@@ -1,6 +1,8 @@
 package chat.view;
 
 import chat.controller.ChatController;
+import chat.controller.FileController;
+
 import javax.swing.*;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -63,6 +65,7 @@ public class ChatPanel extends JPanel
 	{
 		this.setLayout(baseLayout);
 //		this.add(chatDisplay);
+		saveFile.setToolTipText("Put a name in the testfield");
 		this.add(chatPane);
 		this.add(chatButton);
 		this.add(chatField);
@@ -99,15 +102,43 @@ public class ChatPanel extends JPanel
 			public void actionPerformed(ActionEvent click)
 			{
 				String userWords = chatField.getText();
-				String botResponse = baseController.useChatbotCheckers(userWords);
-				//String oldText = chatDisplay.getText();
+				String chatbotResponse = baseController.useChatbotCheckers(userWords);
+				String currentText = chatDisplay.getText(); 
 				
-				chatDisplay.setText("You said: " + userWords + "\n" + "Chatbot said" + botResponse);
+				chatDisplay.setText("You said: " + userWords + "\n" + "Chatbot said" + chatbotResponse +"\n" + currentText);
+				chatDisplay.setCaretPosition(0);
 				chatField.setText("");
 				
 				chatDisplay.setCaretPosition(0);
 			}
 		});
-		}
-
+	
+		saveFile.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				String fileName = chatField.getText();
+			
+				FileController.saveFile(baseController, fileName.trim(), chatDisplay.getText());
+			}
+		});
+	
+		loadFile.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				String fileName = chatField.getText() + ".txt";
+				String saved = FileController.readFile(baseController, fileName);
+				chatDisplay.setText(saved);
+			}
+		});
+		
+		searchTwitter.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				
+			}
+		});
+	}
 }
