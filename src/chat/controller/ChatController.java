@@ -13,7 +13,7 @@ public class ChatController
 	public ChatController()
 	{
 		stupidBot = new Chatbot("Barack Obama");
-		chatView = new ChatViewer();
+		chatView = new ChatViewer(this);
 		baseFrame= new ChatFrame(this);
 	}
 	
@@ -31,6 +31,17 @@ public class ChatController
 //		{
 			
 //		}	
+	}
+	
+	public void handleErrors(Exception currentException)
+	{
+		chatView.displayMessage("An error has occurred. Details provided next.");
+		chatView.displayMessage(currentException.getMessage());
+	}
+	
+	public ChatViewer getPopup()
+	{
+		return chatView;
 	}
 	
 	public ChatFrame getBaseFrame()
