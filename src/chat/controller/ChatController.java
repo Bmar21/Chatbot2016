@@ -3,12 +3,14 @@ package chat.controller;
 import chat.model.Chatbot;
 import chat.view.ChatViewer;
 import chat.view.ChatFrame; 
+import chat.model.CtecTwitter;
 
 public class ChatController 
 {
 	private Chatbot  stupidBot;
 	private ChatViewer chatView;
 	private ChatFrame baseFrame;
+	private CtecTwitter tweetBot;
 	
 	public ChatController()
 	{
@@ -55,6 +57,7 @@ public class ChatController
 	}
 	
 	public String useChatbotCheckers(String input)
+
 	{
 		String answer = "";
 		
@@ -92,7 +95,15 @@ public class ChatController
 		return answer;
 	}
 	
-	private String randomTopicGenerator()
+	public String searchTwitter(String name)
+	{
+		String results = "THe top word from user: " + name + " is: ";
+		results += tweetBot.getMostCommonWord(name);
+		
+		return results;
+	}
+
+    private String randomTopicGenerator()
 	{
 		String randomTopic ="";
 		int random = (int) (Math.random() * 7);
